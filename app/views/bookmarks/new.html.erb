@@ -1,0 +1,8 @@
+<h1>Let add a movie to your list</h1>
+
+
+<%= form_for [@list, @bookmark] do |f| %>
+  <%= f.text_field :comment %>
+  <%= f.select :movie_id,(@movies.pluck :title) %>
+  <%= f.submit %>
+<%end %>
